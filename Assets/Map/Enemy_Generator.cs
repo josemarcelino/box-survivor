@@ -42,7 +42,8 @@ public class Enemy_Generator : MonoBehaviour {
 				if(x > 0) x=8;
 				else x = -8;
 				float y = Random.Range(-5, 5);
-				Instantiate (enemy_1, new Vector3 (x, y, 1), Quaternion.identity);
+				float rotate = Random.Range (-180,180);
+				Instantiate (enemy_1, new Vector3 (x, y, 1),Quaternion.Euler(new Vector3(0, 0, rotate)));
 				unit_level_1 --;
 				timer_1 = Time.time + cd_unit_1;
 				gen_1 = false;

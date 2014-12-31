@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Timer : MonoBehaviour {
-
 	float start_timer;
 	public bool gaming = true;
 	float record = 0;
