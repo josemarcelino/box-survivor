@@ -13,7 +13,6 @@ public class Destroy : MonoBehaviour {
 		
 		if (c.gameObject.tag == "Map-Up" || c.gameObject.tag == "Map-Bot" || c.gameObject.tag == "Map-Left" || c.gameObject.tag == "Map-Right") {
 			howmany++;
-
 		}
 	}
 	// Update is called once per frame
