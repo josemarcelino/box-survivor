@@ -51,6 +51,8 @@
      <Compile Include="Assets\Map\Enemy_Generator.cs" />
      <Compile Include="Assets\Player\CollisionDetect.cs" />
      <Compile Include="Assets\Player\MovingPlayer.cs" />
+     <Compile Include="Assets\Player\PowerUps\WeaponGenerator.cs" />
+     <Compile Include="Assets\Player\PowerUps\blockMovimentGenerator.cs" />
      <Compile Include="Assets\Test_Camera.cs" />
      <Compile Include="Assets\Timer.cs" />
   </ItemGroup>

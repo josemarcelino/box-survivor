@@ -20,15 +20,10 @@ public class Timer : MonoBehaviour {
 				gui = GUI.TextField (new Rect (1, 1, 75, 20), gui, 25);
 		if(gaming == false){
 		
-			if(GUI.Button (new Rect(center.x - (300/ 2),center.y - (100 / 2),300,100), "GAME OVER \n" + gui + " seconds")){
-				  
-					Application.LoadLevel(Application.loadedLevel);
-			}
-					else if(Input.GetKeyDown("enter")){
+			if(GUI.Button(new Rect(center.x - (300/ 2),center.y - (100 / 2),300,100), "GAME OVER (press Space to continue)  \n" + gui + " seconds") || Input.GetKeyDown ("space")){
 				Application.LoadLevel(Application.loadedLevel);
-				}
 			}
-
+		}
 		}
 	}
 

@@ -3,25 +3,23 @@ using System.Collections;
 
 public class Destroy : MonoBehaviour {
 	int speed = 50;
-	public GameObject enemy_1;
+	int howmany = 0;
 	// Use this for initialization
 	void Start () {
 	
 	}
-
-	/*void OnTriggerEnter2D(Collider2D c){
+	//////// COLISION DETECT CHICKEN
+	void OnCollisionEnter2D(Collision2D c){
 		
-		if (c.gameObject.tag == "Enemy") {
-			Instantiate (enemy_1, new Vector3 (this.transform.position.x,this.transform.position.y, 1), Quaternion.identity);
-			Instantiate (enemy_1, new Vector3 (this.transform.position.x,this.transform.position.y, 1), Quaternion.identity);
-			Instantiate (enemy_1, new Vector3 (this.transform.position.x,this.transform.position.y, 1), Quaternion.identity);
+		if (c.gameObject.tag == "Map-Up" || c.gameObject.tag == "Map-Bot" || c.gameObject.tag == "Map-Left" || c.gameObject.tag == "Map-Right") {
+			howmany++;
 
 		}
-	}*/
+	}
 	// Update is called once per frame
 	void Update () {
-		if (this.transform.position.x > 9 || this.transform.position.x < -9 || this.transform.position.y > 6 || this.transform.position.y < -6)
-			DestroyObject(this.gameObject);
+		if (howmany > 2)
+			Destroy (this.gameObject);
 	}
 
 
